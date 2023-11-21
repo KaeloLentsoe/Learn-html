@@ -4,38 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn form</title>
-
-    <script>
-        // Replace 'YOUR_API_KEY' with your actual OpenAI GPT-3 API key
-        const apiKey = 'YOUR_API_KEY';
-        const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions'; // Check the latest API endpoint
-
-        // Function to make API requests
-        function makeApiRequest(prompt) {
-            fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${apiKey}`,
-                },
-                body: JSON.stringify({
-                    prompt: prompt,
-                    // Add other parameters as needed
-                }),
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle the API response data
-                console.log(data);
-                // You can update the webpage with the response here
-            })
-            .catch(error => {
-                // Handle errors
-                console.error('Error:', error);
-            });
-        }
-    </script>
-
 </head>
 <body>
     <div>
@@ -60,7 +28,7 @@
         <h2>The corner of modern day philosophers</h2>
         <p>Personal branding & productization | Decentralization of information | Digital econony</p>
         <div>
-            <form onsubmit="event.preventDefault(); makeApiRequest(this.querySelector('input[name=\'quiry\']').value);">
+            <form action="">
                 <label>Philosoper's heart</label><br>
                 <input name="quiry" type="search">
                 <input type="submit" value="search">
